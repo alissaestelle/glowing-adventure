@@ -14,6 +14,8 @@ app.get('/', (req, res) => {
   res.send('I am the root! 🪴')
 })
 
+app.get('/posts', controlPost.getPosts)
+
 app.listen(PORT, () => {
   console.log(`Express serving up blog bunnies on port ${PORT} 🐰`)
 })
