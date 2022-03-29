@@ -1,31 +1,29 @@
-import Header from '../components/Header'
 import Search from '../components/Search'
+import SideBar from '../components/SideBar'
 import Article from '../components/Article'
+import NewPost from '../components/NewPost'
+// import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 
 const Home = () => {
+  const [clicked, toggleClick] = useState(false)
+  // let navigate = useNavigate()
+
+  const createPost = (e) => {
+    toggleClick(!clicked)
+    // !clicked = true
+  }
+
   return (
     <div className="Home">
-      <Header />
-      <Search />
-      <aside>Testing out a side bar!</aside>
-      <main className="Posts">
-        <h1>Posts</h1>
-        {/* <Article /> */}
-        <article>
-          <header>
-            <h3>Post Title</h3>
-            <p>By: Author</p>
-          </header>
-          <p>This is content!</p>
-        </article>
-        <article>
-          <header>
-            <h3>Post Title</h3>
-            <p>By: Author</p>
-          </header>
-          <p>This is content!</p>
-        </article>
-      </main>
+      <header>
+        <h1>blog site.</h1>
+        <Search />
+      </header>
+      <aside>
+        <SideBar createPost={createPost} clicked={clicked} />
+      </aside>
+      <main className="Posts">{!clicked ? <Article /> : <NewPost />}</main>
     </div>
   )
 }

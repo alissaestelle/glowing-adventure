@@ -1,17 +1,19 @@
 * {
   box-sizing: border-box;
+  font-family: 'EB Garamond', serif;
+  text-transform: lowercase;
 }
 
 .Home {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 0.25fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
   grid-gap: 5px;
 
   height: 100vh;
   margin: 0;
   font-family: Helvetica;
-  background-color: rgb(255, 192, 203, 0.5);
+  background-color: rgb(255, 192, 203, 0.35);
 }
 
 .Home aside,
@@ -19,12 +21,77 @@ main {
   background-color: whitesmoke;
 }
 
+.Home header {
+  grid-column: span 2;
+}
+
+.Home h1 {
+  margin: 0.25em;
+  text-align: center;
+  font-size: 3.5em;
+}
+
+.Search input {
+  display: block;
+  width: 75vw;
+  margin: auto;
+  border: none;
+  border-bottom: 2px solid whitesmoke;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: lowercase;
+  background-color: transparent;
+}
+
+.Search h1 {
+  font-size: 2em;
+}
+
 .Posts h1 {
   text-align: center;
+  font-size: 3em;
 }
 
 .Posts article {
-  margin: auto;
   width: 65vw;
+  margin: auto;
   background-color: rgb(255, 192, 203, 0.25);
+}
+
+.New-Post {
+  margin-top: 5%;
+}
+
+.New-Post h1 {
+  padding: 0.25em;
+}
+
+.New-Post article {
+  text-align: center;
+  height: 70vh;
+}
+
+.New-Post textarea,
+input {
+  width: 80%;
+  margin: auto;
+  border: none;
+  padding: 0.25em;
+}
+
+.New-Post input {
+  font-size: 1.75em;
+  border-bottom: 1px solid goldenrod;
+}
+
+.New-Post textarea {
+  font-size: 1.25em;
+}
+
+.New-Post button {
+  margin: 0.5em;
+  padding: 0.15em 2em;
+  border: none;
+  background-color: whitesmoke;
+  font-size: 1.5em;
 }
