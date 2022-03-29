@@ -6,8 +6,21 @@ import NewPost from '../components/NewPost'
 import { useState } from 'react'
 
 const Home = () => {
+  const [blogPost, setBlogPost] = useState({
+    title: '',
+    content: ''
+  })
   const [clicked, toggleClick] = useState(false)
+
   // let navigate = useNavigate()
+
+  const saveContent = (e) => {
+    const newPost = {
+      ...blogPost,
+      [e.target.name]: e.target.value
+    }
+    setBlogPost(newPost)
+  }
 
   const createPost = (e) => {
     toggleClick(!clicked)
@@ -23,7 +36,13 @@ const Home = () => {
       <aside>
         <SideBar createPost={createPost} clicked={clicked} />
       </aside>
-      <main className="Posts">{!clicked ? <Article /> : <NewPost />}</main>
+      <main className="Posts">
+        {!clicked ? (
+          <Article />
+        ) : (
+          <NewPost blogPost={blogPost} saveContent={saveContent} />
+        )}
+      </main>
     </div>
   )
 }

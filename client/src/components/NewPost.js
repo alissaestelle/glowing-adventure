@@ -1,13 +1,22 @@
-const NewPost = () => {
+const NewPost = ({ blogPost, saveContent }) => {
   return (
     <div className="New-Post">
       <article>
         <form>
           <h1>Create.</h1>
-          <input placeholder="Title" onChange=saveText></input>
+          <input
+            type="text"
+            placeholder="Title"
+            name="title"
+            value={blogPost.title}
+            onChange={saveContent}
+          ></input>
           <textarea
             rows="10"
-            placeholder="In that moment, I didn't know what hit me." onChange=saveText
+            placeholder="In that moment, I didn't know what hit me."
+            name="content"
+            value={blogPost.content}
+            onChange={saveContent}
           ></textarea>
         </form>
         <button>save</button>
