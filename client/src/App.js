@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 // import NewPost from './components/NewPost'
-import History from './pages/History'
+import EditPost from './pages/EditPost'
 
 function App() {
   // const [post, setPost] = useState({
@@ -23,8 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/new/post" element={<NewPost />} /> */}
-          <Route path="/history" element={<History />} />
+          <Route path="/edits" element={<EditPost />} />
         </Routes>
       </main>
     </div>

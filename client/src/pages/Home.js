@@ -4,9 +4,10 @@ import Search from '../components/Search'
 import SideBar from '../components/SideBar'
 import Article from '../components/Article'
 import NewPost from '../components/NewPost'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  let navigate = useNavigate()
   const [articles, setArticles] = useState([])
   const [blogPost, setBlogPost] = useState({
     title: '',
@@ -30,8 +31,6 @@ const Home = () => {
     // !clicked = true
   }
 
-  // let navigate = useNavigate()
-
   const saveContent = (e) => {
     const newPost = {
       ...blogPost,
@@ -48,6 +47,7 @@ const Home = () => {
       author: '62420bcc70117cfd84d31f3a',
       content: ''
     })
+    navigate('/edits')
     // toggleSubmit(!submitted)
   }
 
