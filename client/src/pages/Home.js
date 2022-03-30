@@ -16,6 +16,12 @@ const Home = () => {
   const [clicked, toggleClick] = useState(false)
   const [submitted, toggleSubmit] = useState(false)
 
+  const renderArticles = async () => {
+    let database = await axios.get('http://localhost:3001/homepage')
+    setArticles(database)
+    console.log(database)
+  }
+
   const createPost = (e) => {
     toggleClick(!clicked)
     // !clicked = true
