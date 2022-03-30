@@ -1,6 +1,6 @@
 const Article = (props) => {
   return (
-    <div>
+    <div className="Posts">
       <article>
         <header>
           <h3>{props.title}</h3>

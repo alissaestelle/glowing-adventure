@@ -4,7 +4,7 @@
   text-transform: lowercase;
 }
 
-.App {
+.Home {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 0.2fr 1fr;
@@ -12,30 +12,25 @@
 
   height: 100vh;
   margin: 0;
-  background-color: rgb(255, 192, 203, 0.35);
+  background-color: cornflowerblue;
 }
 
-.App header {
+.Home header {
   grid-column: span 2;
 }
 
-.App h1 {
+.Home h1 {
   margin: 0.25em;
   text-align: center;
   font-size: 3.5em;
 }
 
-.App aside {
+.Home aside {
   background-color: whitesmoke;
 }
 
 .Home main {
-  background-color: whitesmoke;
-}
-
-.Home {
-  width: 65vw;
-  margin: auto;
+  background-color: yellowgreen;
 }
 
 .Search input {
@@ -51,7 +46,11 @@
 }
 
 .Search h1 {
-  font-size: 2em;
+  font-size: 3em;
+}
+
+.Side h1 {
+  font-size: 2.5em;
 }
 
 .Posts h1 {
@@ -62,7 +61,7 @@
 .Posts article {
   width: 65vw;
   margin: auto;
-  background-color: rgb(255, 192, 203, 0.25);
+  background-color: orange;
 }
 
 #User {
