@@ -12,11 +12,11 @@ const getPosts = async (req, res) => {
 }
 
 const createPost = async (req, res) => {
-  const model = await Post.create(req.body, (err) => {
+  const storedPost = await Post.create(req.body, (err) => {
     res.send(err)
-    console.log(model)
+    // console.log(storedPost)
   })
-  // res.json(model)
+  res.json(storedPost)
   await consolePosts()
 }
 

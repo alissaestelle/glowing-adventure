@@ -12,12 +12,12 @@ app.use(cors())
 app.use(express.json())
 app.use(logger('dev'))
 
-app.get('/', (req, res) => {
-  res.send('I am the root! 🪴')
-})
+// app.get('/', (req, res) => {
+//   res.send('I am the root! 🪴')
+// })
 
-app.get('/posts', controlPost.getPosts)
-app.post('/posts', controlPost.createPost)
+app.get('/', controlPost.getPosts)
+app.post('/newpost', controlPost.createPost)
 
 app.listen(PORT, () => {
   console.log(`Express serving up blog bunnies on port ${PORT} 🐰`)

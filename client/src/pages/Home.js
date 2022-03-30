@@ -1,16 +1,25 @@
+import axios from 'axios'
+import { useState } from 'react'
 import Search from '../components/Search'
 import SideBar from '../components/SideBar'
 import Article from '../components/Article'
 import NewPost from '../components/NewPost'
 // import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
 
 const Home = () => {
+  const [articles, setArticles] = useState('')
   const [blogPost, setBlogPost] = useState({
     title: '',
+    author: 'rarejules',
     content: ''
   })
   const [clicked, toggleClick] = useState(false)
+  const [submitted, toggleSubmit] = useState(false)
+
+  const createPost = (e) => {
+    toggleClick(!clicked)
+    // !clicked = true
+  }
 
   // let navigate = useNavigate()
 
@@ -22,9 +31,15 @@ const Home = () => {
     setBlogPost(newPost)
   }
 
-  const createPost = (e) => {
-    toggleClick(!clicked)
-    // !clicked = true
+  const submitPost = async (e) => {
+    e.preventDefault()
+    await axios.post('http://localhost:3001/newpost', blogPost)
+    setBlogPost({
+      title: '',
+      author: 'rarejules',
+      content: ''
+    })
+    toggleSubmit(!submitted)
   }
 
   return (
@@ -40,7 +55,11 @@ const Home = () => {
         {!clicked ? (
           <Article />
         ) : (
-          <NewPost blogPost={blogPost} saveContent={saveContent} />
+          <NewPost
+            blogPost={blogPost}
+            saveContent={saveContent}
+            submitPost={submitPost}
+          />
         )}
       </main>
     </div>

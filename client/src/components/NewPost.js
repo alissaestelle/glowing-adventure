@@ -1,9 +1,9 @@
-const NewPost = ({ blogPost, saveContent }) => {
+const NewPost = ({ blogPost, saveContent, submitPost }) => {
   return (
     <div className="New-Post">
       <article>
-        <form>
-          <h1>Create.</h1>
+        <form onSubmit={submitPost}>
+          <h1 id="User">@{blogPost.author}</h1>
           <input
             type="text"
             placeholder="Title"
@@ -18,8 +18,8 @@ const NewPost = ({ blogPost, saveContent }) => {
             value={blogPost.content}
             onChange={saveContent}
           ></textarea>
+          <input id="Save" type="submit" value="Create" />
         </form>
-        <button>save</button>
       </article>
     </div>
   )
