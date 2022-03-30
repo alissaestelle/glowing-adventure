@@ -1,12 +1,13 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import Search from '../components/Search'
-import SideBar from '../components/SideBar'
+// import Search from '../components/Search'
+// import SideBar from '../components/SideBar'
 import Article from '../components/Article'
 import NewPost from '../components/NewPost'
+// import EditPost from './EditPost'
 import { useNavigate } from 'react-router-dom'
 
-const Home = () => {
+const Home = ({ clicked, createPost }) => {
   let navigate = useNavigate()
   const [articles, setArticles] = useState([])
   const [blogPost, setBlogPost] = useState({
@@ -14,7 +15,7 @@ const Home = () => {
     author: '62420bcc70117cfd84d31f3a',
     content: ''
   })
-  const [clicked, toggleClick] = useState(false)
+  // const [clicked, toggleClick] = useState(false)
   // const [submitted, toggleSubmit] = useState(false)
 
   useEffect(() => {
@@ -26,10 +27,10 @@ const Home = () => {
     renderArticles()
   }, [])
 
-  const createPost = (e) => {
-    toggleClick(!clicked)
-    // !clicked = true
-  }
+  // const createPost = (e) => {
+  //   toggleClick(!clicked)
+  //   // !clicked = true
+  // }
 
   const saveContent = (e) => {
     const newPost = {
@@ -53,13 +54,12 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <header>
-        <h1>blog site.</h1>
+      {/* <header>
         <Search />
       </header>
       <aside>
         <SideBar createPost={createPost} clicked={clicked} />
-      </aside>
+      </aside> */}
       <main className="Posts">
         {!clicked ? (
           !!articles.length &&
@@ -78,6 +78,7 @@ const Home = () => {
             submitPost={submitPost}
           />
         )}
+        {/* {!submitted && <EditPost />} */}
       </main>
     </div>
   )

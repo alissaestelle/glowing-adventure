@@ -1,24 +1,30 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-// import { useState } from 'react'
+import { useState } from 'react'
 // import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
+import Search from './components/Search'
+import SideBar from './components/SideBar'
 // import NewPost from './components/NewPost'
 import EditPost from './pages/EditPost'
 
 function App() {
-  // const [post, setPost] = useState({
-  //   title: '',
-  //   author: '',
-  //   content: ''
-  // })
+  const [clicked, toggleClick] = useState(false)
+
+  const createPost = (e) => {
+    toggleClick(!clicked)
+    // !clicked = true
+  }
 
   return (
     <div className="App">
-      {/* <header>
-        <Header />
-      </header> */}
+      <header>
+        <Search />
+      </header>
+      <aside>
+        <SideBar createPost={createPost} clicked={clicked} />
+      </aside>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

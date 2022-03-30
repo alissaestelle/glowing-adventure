@@ -4,8 +4,8 @@ const SideBar = ({ clicked, createPost }) => {
       <h1>side bar.</h1>
       <nav>
         <ul>
-          <li onClick=""></li>
-          <li onClick={createPost}>{clicked ? 'view old' : 'create new'}</li>
+          {/* <li onClick=""></li> */}
+          <li onClick={createPost}>{clicked ? 'Home' : 'Create New'}</li>
         </ul>
       </nav>
     </div>

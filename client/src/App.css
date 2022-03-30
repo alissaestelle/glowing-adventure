@@ -4,7 +4,7 @@
   text-transform: lowercase;
 }
 
-.Home {
+.App {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 0.2fr 1fr;
@@ -15,19 +15,27 @@
   background-color: rgb(255, 192, 203, 0.35);
 }
 
-.Home aside,
-main {
-  background-color: whitesmoke;
-}
-
-.Home header {
+.App header {
   grid-column: span 2;
 }
 
-.Home h1 {
+.App h1 {
   margin: 0.25em;
   text-align: center;
   font-size: 3.5em;
+}
+
+.App aside {
+  background-color: whitesmoke;
+}
+
+.Home main {
+  background-color: whitesmoke;
+}
+
+.Home {
+  width: 65vw;
+  margin: auto;
 }
 
 .Search input {

@@ -7,6 +7,8 @@ const Article = (props) => {
           <p>by: @rarejules</p>
         </header>
         <p>{props.content}</p>
+        {/* <input id="Edit" type="submit" value="Edit" /> */}
+        <button>Edit</button>
       </article>
     </div>
   )
