@@ -20,7 +20,18 @@ const createPost = async (req, res) => {
   await consolePosts()
 }
 
+const updatePost = async (req, res) => {
+  try {
+    const specificPost = await Post.findById(req.params.id)
+    res.json(specificPost)
+  } catch (e) {
+    console.log(e)
+    res.send('Oops! Something went wrong.')
+  }
+}
+
 module.exports = {
   getPosts,
-  createPost
+  createPost,
+  updatePost
 }

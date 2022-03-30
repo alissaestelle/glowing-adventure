@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Article = (props) => {
   return (
     <div className="Posts">
@@ -8,7 +10,7 @@ const Article = (props) => {
         </header>
         <p>{props.content}</p>
         {/* <input id="Edit" type="submit" value="Edit" /> */}
-        <button>Edit</button>
+        <Link to="/edits">Edit</Link>
       </article>
     </div>
   )

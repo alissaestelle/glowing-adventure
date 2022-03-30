@@ -1,11 +1,11 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+// import { useNavigate } from 'react-router-dom'
 import Search from '../components/Search'
 import SideBar from '../components/SideBar'
 import Article from '../components/Article'
 import NewPost from '../components/NewPost'
 // import EditPost from './EditPost'
-// import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
   // let navigate = useNavigate()
