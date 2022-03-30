@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Search from '../components/Search'
 import SideBar from '../components/SideBar'
 import Article from '../components/Article'
@@ -7,20 +7,23 @@ import NewPost from '../components/NewPost'
 // import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
-  const [articles, setArticles] = useState('')
+  const [articles, setArticles] = useState([])
   const [blogPost, setBlogPost] = useState({
     title: '',
-    author: 'rarejules',
+    author: '62420bcc70117cfd84d31f3a',
     content: ''
   })
   const [clicked, toggleClick] = useState(false)
-  const [submitted, toggleSubmit] = useState(false)
+  // const [submitted, toggleSubmit] = useState(false)
 
-  const renderArticles = async () => {
-    let database = await axios.get('http://localhost:3001/homepage')
-    setArticles(database)
-    console.log(database)
-  }
+  useEffect(() => {
+    const renderArticles = async () => {
+      let database = await axios.get('http://localhost:3001/homepage')
+      console.log(database)
+      setArticles(database.data)
+    }
+    renderArticles()
+  }, [])
 
   const createPost = (e) => {
     toggleClick(!clicked)
@@ -42,10 +45,10 @@ const Home = () => {
     await axios.post('http://localhost:3001/newpost', blogPost)
     setBlogPost({
       title: '',
-      author: 'rarejules',
+      author: '62420bcc70117cfd84d31f3a',
       content: ''
     })
-    toggleSubmit(!submitted)
+    // toggleSubmit(!submitted)
   }
 
   return (
@@ -59,7 +62,15 @@ const Home = () => {
       </aside>
       <main className="Posts">
         {!clicked ? (
-          <Article />
+          !!articles.length &&
+          articles.map((article) => (
+            <Article
+              key={article._id}
+              title={article.title}
+              author={article.author}
+              content={article.content}
+            />
+          ))
         ) : (
           <NewPost
             blogPost={blogPost}

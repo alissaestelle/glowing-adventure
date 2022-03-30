@@ -3,7 +3,7 @@ const NewPost = ({ blogPost, saveContent, submitPost }) => {
     <div className="New-Post">
       <article>
         <form onSubmit={submitPost}>
-          <h1 id="User">@{blogPost.author}</h1>
+          <h1 id="User">@rarejules</h1>
           <input
             type="text"
             placeholder="Title"
