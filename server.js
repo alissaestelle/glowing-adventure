@@ -18,7 +18,7 @@ app.use(logger('dev'))
 
 app.get('/homepage', controlPost.getPosts)
 app.post('/newpost', controlPost.createPost)
-app.put('/post/:id', controlPost.updatePost)
+app.put('/edits/:id', controlPost.updatePost)
 
 app.listen(PORT, () => {
   console.log(`Express serving up blog bunnies on port ${PORT} 🐰`)
