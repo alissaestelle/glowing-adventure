@@ -12,6 +12,7 @@
 
   height: 100vh;
   margin: 0;
+  background-color: rgb(80, 91, 105);
 }
 
 .App header {
@@ -34,6 +35,10 @@
   display: grid;
   grid-template-columns: 0.25fr 1fr;
   grid-template-rows: 1fr;
+
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(80, 91, 105);
 }
 
 .Edit {
@@ -41,6 +46,10 @@
   grid-template-columns: 0.25fr 1fr;
   grid-template-rows: 1fr;
   text-align: center;
+
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(80, 91, 105);
 }
 
 .Delete {
@@ -48,6 +57,10 @@
   grid-template-columns: 0.25fr 1fr;
   grid-template-rows: 1fr;
   text-align: center;
+
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(80, 91, 105);
 }
 
 .Created-Post {
@@ -55,13 +68,18 @@
   grid-template-columns: 0.25fr 1fr;
   grid-template-rows: 1fr;
   text-align: center;
+
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(80, 91, 105);
 }
 
 .Home aside {
-  background: linear-gradient(rgb(233, 240, 250), white);
-  margin-top: 2em;
+  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
+  margin-top: 3.5em;
   border-radius: 20px;
   text-align: center;
+  height: 75vh;
 }
 
 .Home main {
@@ -132,7 +150,7 @@
 
 .New-Post article {
   text-align: center;
-  height: 70vh;
+  height: 100vh;
 }
 
 .New-Post textarea,
@@ -167,6 +185,8 @@ input {
 
 .Edit main {
   width: 60vw;
+  height: 100vh;
+  text-align: center;
   margin: auto;
   padding-top: 0.5em;
   border-radius: 20px;
@@ -184,10 +204,11 @@ input {
 }
 
 .Edit aside {
-  background: linear-gradient(rgb(233, 240, 250), white);
-  margin-top: 2em;
+  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
+  margin-top: 3.5em;
   border-radius: 20px;
   text-align: center;
+  height: 75vh;
 }
 
 #Edit-Search input {
@@ -226,10 +247,11 @@ input {
 }
 
 .Delete aside {
-  background: linear-gradient(rgb(233, 240, 250), white);
-  margin-top: 2em;
+  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
+  margin-top: 3.5em;
   border-radius: 20px;
   text-align: center;
+  height: 75vh;
 }
 
 .Delete h1 {
@@ -253,10 +275,11 @@ input {
 }
 
 .Created-Post aside {
-  background: linear-gradient(rgb(233, 240, 250), white);
-  margin-top: 2em;
+  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
+  margin-top: 3.5em;
   border-radius: 20px;
   text-align: center;
+  height: 75vh;
 }
 
 .Created-Post h1 {
