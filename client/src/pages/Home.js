@@ -45,7 +45,7 @@ const Home = () => {
       author: '62420bcc70117cfd84d31f3a',
       content: ''
     })
-    navigate('/')
+    navigate('/post/created')
   }
 
   return (

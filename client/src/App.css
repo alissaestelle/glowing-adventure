@@ -50,6 +50,13 @@
   text-align: center;
 }
 
+.Created-Post {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-template-rows: 1fr;
+  text-align: center;
+}
+
 .Home aside {
   background: linear-gradient(rgb(233, 240, 250), white);
   margin-top: 0.5em;
@@ -241,6 +248,33 @@ input {
 }
 
 .Delete main {
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+.Created-Post aside {
+  background: linear-gradient(rgb(233, 240, 250), white);
+  margin-top: 0.5em;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.Created-Post h1 {
+  font-size: 2.5em;
+}
+
+.Created-Post input {
+  font-size: 1em;
+}
+
+.Created-Post a {
+  display: block;
+  margin-top: 1em;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.Created-Post main {
   font-size: 2em;
   margin-top: 1em;
 }
