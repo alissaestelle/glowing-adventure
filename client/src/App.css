@@ -8,74 +8,74 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 0.2fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 10px;
 
   height: 100vh;
   margin: 0;
-  background-color: cornflowerblue;
+  background-color: rgb(2, 2, 56);
 }
 
 .Home header {
   grid-column: span 2;
+  margin-top: 0.5em;
 }
 
-.Home h1 {
-  margin: 0.25em;
-  text-align: center;
+.Title h1 {
+  text-align: right;
   font-size: 3.5em;
+  padding-top: 0.15em;
+  padding-right: 0.35em;
+  padding-bottom: 0.15em;
 }
 
 .Home aside {
-  background-color: whitesmoke;
+  background-color: rgba(252, 203, 129, 0.699);
+  margin-top: 0.5em;
+  border-radius: 20px;
+  text-align: center;
 }
 
 .Home main {
-  background-color: yellowgreen;
-  padding-top: 1.5em;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  border-radius: 20px;
 }
 
 .Title {
-  background-color: antiquewhite;
-  width: 65vw;
+  background-image: url('https://imgur.com/mTlkbMv.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  width: 60vw;
   margin: auto;
-  padding-bottom: 0.05%;
   border-radius: 50px;
+  color: rgba(248, 196, 23, 0.5);
 }
 
-.Search input {
-  display: block;
-  border: none;
-  float: left;
-  margin-left: 0.75em;
-  width: 19.75vw;
-  font-size: 1.75em;
-  color: whitesmoke;
-  font-weight: bold;
-  text-transform: lowercase;
-  background-color: transparent;
-}
-
-.Search ::placeholder {
-  color: whitesmoke;
-}
-
-.Search h1 {
-  font-size: 3em;
+.SearchBar input {
+  font-size: 1em;
 }
 
 .Side h1 {
   font-size: 2.5em;
 }
 
-.Posts h1 {
-  text-align: center;
-  font-size: 3em;
+.Side li {
+  list-style: none;
+  font-size: 1.5em;
+  margin-right: 1em;
+}
+
+.Posts h3 {
+  font-size: 2em;
+  margin-bottom: 0;
 }
 
 .Posts article {
-  width: 65vw;
-  margin: auto;
-  background-color: orange;
+  width: 55vw;
+  margin-left: 2em;
+  background-color: blanchedalmond;
+  border-radius: 10px;
 }
 
 #User {

@@ -2,7 +2,7 @@ const SideBar = ({ clicked, createPost }) => {
   return (
     <div className="Side">
       <h1>side bar.</h1>
-      <form>
+      <form className="SearchBar">
         <input placeholder="Search"></input>
       </form>
       <nav>

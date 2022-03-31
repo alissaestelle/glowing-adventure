@@ -1,6 +1,6 @@
-const Search = () => {
+const Header = () => {
   return (
-    <div className="Search">
+    <div className="Header">
       <div className="Title">
         <h1>blog site.</h1>
       </div>
@@ -8,4 +8,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default Header

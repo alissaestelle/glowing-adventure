@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 // import { useNavigate } from 'react-router-dom'
-import Search from '../components/Search'
+import Header from '../components/Header'
 import SideBar from '../components/SideBar'
 import Article from '../components/Article'
 import NewPost from '../components/NewPost'
@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <div className="Home">
       <header>
-        <Search />
+        <Header />
       </header>
       <aside>
         <SideBar createPost={createPost} clicked={clicked} />
