@@ -16,8 +16,8 @@ app.use(logger('dev'))
 //   res.send('I am the root! 🪴')
 // })
 
-app.get('/homepage', controlPost.getPosts)
-app.post('/newpost', controlPost.createPost)
+app.get('/', controlPost.getPosts)
+app.post('/new', controlPost.createPost)
 app.put('/edits/:id', controlPost.updatePost)
 
 app.listen(PORT, () => {

@@ -10,7 +10,7 @@ const Article = (props) => {
         </header>
         <p>{props.content}</p>
         {/* <input id="Edit" type="submit" value="Edit" /> */}
-        <Link to="/edits">Edit</Link>
+        <Link to={`/edits/${props.key}`}>Edit</Link>
       </article>
     </div>
   )
