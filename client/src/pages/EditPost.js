@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Form from '../components/Form'
 
 const EditPost = () => {
@@ -37,14 +38,18 @@ const EditPost = () => {
 
   return (
     <div className="Edit">
-      <header>Test</header>
-      <main>
-        <Form
-          formValues={formValues}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
-      </main>
+      <aside>
+        <h1>side bar.</h1>
+        <form className="Search">
+          <input placeholder="Search"></input>
+        </form>
+        <Link to="/">Home</Link>
+      </aside>
+      <Form
+        formValues={formValues}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
     </div>
   )
 }

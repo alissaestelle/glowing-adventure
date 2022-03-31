@@ -17,7 +17,7 @@
 .App header {
   grid-column: span 2;
   background-image: url('https://imgur.com/mTlkbMv.jpg');
-  background-size: cover;
+  background-size: 100vw;
   background-repeat: no-repeat;
   background-position: 100%;
 }
@@ -30,12 +30,19 @@
 
 .Home {
   display: grid;
-  grid-template-columns: 0.35fr 1fr;
+  grid-template-columns: 0.25fr 1fr;
   grid-template-rows: 1fr;
 }
 
+.Edit {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-template-rows: 1fr;
+  text-align: center;
+}
+
 .Home aside {
-  background: linear-gradient(white, lightblue);
+  background: linear-gradient(rgb(233, 240, 250), white);
   margin-top: 0.5em;
   border-radius: 20px;
   text-align: center;
@@ -43,23 +50,25 @@
 
 .Home main {
   width: 60vw;
-  margin-top: 0.5em;
+  margin: auto;
   padding-top: 0.5em;
   border-radius: 20px;
-}
-
-.SearchBar input {
-  font-size: 1em;
 }
 
 .Side h1 {
   font-size: 2.5em;
 }
 
-.Side li {
-  list-style: none;
+.Search input {
+  font-size: 1em;
+}
+
+.Links {
   font-size: 1.5em;
-  margin-right: 1em;
+}
+
+.Posts {
+  margin-bottom: 2em;
 }
 
 .Posts h3 {
@@ -67,22 +76,37 @@
   margin-bottom: 0;
 }
 
-.Post-Header {
+.Posts header {
   background-color: #fde6ee;
   background-image: none;
+  padding: 0.5em;
 }
 
 .Posts article {
   width: 55vw;
+  margin-top: 0.5em;
   margin-left: 4em;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
+}
+
+.Posts a {
+  font-size: 1.35em;
+  text-decoration: none;
+}
+
+.Posts button {
+  font-size: 1.25em;
+  float: right;
+  border: none;
+  background-color: transparent;
 }
 
 #User {
   font-family: Helvetica;
   font-size: 2em;
   padding: 0.5em;
+  margin-bottom: 0;
   color: black;
 }
 
@@ -125,20 +149,38 @@ input {
   font-size: 1.5em;
 }
 
-.Edit {
-  height: 100vh;
-  background-color: cornflowerblue;
-}
-
-.Edit form {
+.Edit aside {
+  background: linear-gradient(rgb(233, 240, 250), white);
+  margin-top: 0.5em;
+  border-radius: 20px;
   text-align: center;
-  display: block;
 }
 
 .Edit input {
   display: block;
+  width: 80%;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: 1px solid goldenrod;
+  background-color: whitesmoke;
 }
 
 .Edit textarea {
-  width: 50vw;
+  width: 80%;
+  font-size: 1.25em;
+  background-color: whitesmoke;
+}
+
+.Edit button {
+  display: block;
+  margin: auto;
+}
+
+#Save {
+  width: 30%;
+  margin: auto;
+  padding: 0.25em;
+  border: none;
+  background-color: whitesmoke;
+  font-size: 1.5em;
 }

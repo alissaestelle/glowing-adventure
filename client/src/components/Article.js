@@ -1,19 +1,19 @@
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Article = (props) => {
-  // useEffect((props) => {
+  let navigate = useNavigate()
   const handleDelete = async () => {
     await axios.delete(`http://localhost:3001/delete/posts/${props.objectID}`)
     console.log('Successfully Deleted!')
+    navigate('/confirm/delete')
   }
-  //   handleDelete()
-  // })
 
   return (
     <div className="Posts">
       <article>
-        <header className="Post-Header">
+        <header>
           <h3>{props.title}</h3>
           <p>by: @rarejules</p>
         </header>

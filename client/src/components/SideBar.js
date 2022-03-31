@@ -2,14 +2,12 @@ const SideBar = ({ createNew, clicked }) => {
   return (
     <div className="Side">
       <h1>side bar.</h1>
-      <form className="SearchBar">
+      <form className="Search">
         <input placeholder="Search"></input>
       </form>
-      <nav>
-        <ul>
-          <li onClick={createNew}>{clicked ? 'Home' : 'Create New'}</li>
-        </ul>
-      </nav>
+      <div className="Links">
+        <p onClick={createNew}>{clicked ? 'Home' : 'Create New'}</p>
+      </div>
     </div>
   )
 }
