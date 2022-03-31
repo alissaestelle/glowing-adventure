@@ -16,7 +16,7 @@
 
 .App header {
   grid-column: span 2;
-  background-image: url('https://imgur.com/QtTY4ja.jpg');
+  background-image: url('https://imgur.com/2Hyxa0M.jpg');
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position: 100%;
@@ -102,7 +102,7 @@
   width: 55vw;
   margin-top: 1.5em;
   margin-left: 2em;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border-radius: 10px;
 }
 
