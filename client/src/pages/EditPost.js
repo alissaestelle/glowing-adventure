@@ -40,16 +40,18 @@ const EditPost = () => {
     <div className="Edit">
       <aside>
         <h1>side bar.</h1>
-        <form className="Search">
+        <form id="Edit-Search">
           <input placeholder="Search"></input>
         </form>
         <Link to="/">Home</Link>
       </aside>
-      <Form
-        formValues={formValues}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
+      <main>
+        <Form
+          formValues={formValues}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
+      </main>
     </div>
   )
 }
