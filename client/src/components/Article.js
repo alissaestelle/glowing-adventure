@@ -4,7 +4,7 @@ const Article = (props) => {
   return (
     <div className="Posts">
       <article>
-        <header>
+        <header style="background-image: url('https://imgur.com/AqTMzee.jpg')">
           <h3>{props.title}</h3>
           <p>by: @rarejules</p>
         </header>
