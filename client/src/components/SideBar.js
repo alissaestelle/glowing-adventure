@@ -1,4 +1,4 @@
-const SideBar = ({ clicked, createPost }) => {
+const SideBar = ({ createNew, clicked }) => {
   return (
     <div className="Side">
       <h1>side bar.</h1>
@@ -7,7 +7,7 @@ const SideBar = ({ clicked, createPost }) => {
       </form>
       <nav>
         <ul>
-          <li onClick={createPost}>{clicked ? 'Home' : 'Create New'}</li>
+          <li onClick={createNew}>{clicked ? 'Home' : 'Create New'}</li>
         </ul>
       </nav>
     </div>

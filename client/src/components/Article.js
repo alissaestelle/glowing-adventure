@@ -2,14 +2,13 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Article = (props) => {
-  const handleDelete = async (e) => {
-    e.preventDefault()
-    await axios.delete(
-      `http://localhost:3001/delete/posts/${props.objectID}`,
-      props.formValues
-    )
+  // useEffect((props) => {
+  const handleDelete = async () => {
+    await axios.delete(`http://localhost:3001/delete/posts/${props.objectID}`)
     console.log('Successfully Deleted!')
   }
+  //   handleDelete()
+  // })
 
   return (
     <div className="Posts">

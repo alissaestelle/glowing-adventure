@@ -1,14 +1,12 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-// import { useNavigate } from 'react-router-dom'
-import Header from '../components/Header'
-import SideBar from '../components/SideBar'
+import { useNavigate } from 'react-router-dom'
 import Article from '../components/Article'
 import NewPost from '../components/NewPost'
+import SideBar from '../components/SideBar'
 // import EditPost from './EditPost'
 
 const Home = () => {
-  // let navigate = useNavigate()
   const [blogPost, setBlogPost] = useState({
     title: '',
     author: '62420bcc70117cfd84d31f3a',
@@ -16,7 +14,7 @@ const Home = () => {
   })
   const [articles, setArticles] = useState([])
   const [clicked, toggleClick] = useState(false)
-  // const [submitted, toggleSubmit] = useState(false)
+  let navigate = useNavigate()
 
   useEffect(() => {
     const renderArticles = async () => {
@@ -27,17 +25,16 @@ const Home = () => {
     renderArticles()
   }, [])
 
+  const createNew = (e) => {
+    toggleClick(!clicked)
+  }
+
   const saveContent = (e) => {
     const newPost = {
       ...blogPost,
       [e.target.name]: e.target.value
     }
     setBlogPost(newPost)
-  }
-
-  const createPost = (e) => {
-    toggleClick(!clicked)
-    // !clicked = true
   }
 
   const submitPost = async (e) => {
@@ -48,17 +45,13 @@ const Home = () => {
       author: '62420bcc70117cfd84d31f3a',
       content: ''
     })
-    // navigate('/edits')
-    // toggleSubmit(!submitted)
+    navigate('/')
   }
 
   return (
     <div className="Home">
-      <header id="Home-Header">
-        <Header />
-      </header>
       <aside>
-        <SideBar createPost={createPost} clicked={clicked} />
+        <SideBar createNew={createNew} clicked={clicked} />
       </aside>
       <main>
         {!clicked ? (
@@ -79,7 +72,6 @@ const Home = () => {
             submitPost={submitPost}
           />
         )}
-        {/* {!submitted && <EditPost />} */}
       </main>
     </div>
   )
