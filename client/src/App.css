@@ -29,7 +29,7 @@
 }
 
 .Home aside {
-  background-color: rgba(252, 203, 129, 0.699);
+  background: linear-gradient(#fdfdfd, #7cc2da);
   margin-top: 0.5em;
   border-radius: 20px;
   text-align: center;
@@ -73,8 +73,8 @@
 
 .Posts article {
   width: 55vw;
-  margin-left: 2em;
-  background-color: blanchedalmond;
+  margin-left: 4em;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }
 
@@ -82,6 +82,7 @@
   font-family: Helvetica;
   font-size: 2em;
   padding: 0.5em;
+  color: aliceblue;
 }
 
 .New-Post {
@@ -99,16 +100,19 @@ input {
   margin: auto;
   border: none;
   padding: 0.25em;
+  background-color: white;
 }
 
 .New-Post input {
   font-size: 1.5em;
   font-weight: bold;
   border-bottom: 1px solid goldenrod;
+  background-color: aliceblue;
 }
 
 .New-Post textarea {
   font-size: 1.25em;
+  background-color: aliceblue;
 }
 
 #Save {
@@ -116,7 +120,7 @@ input {
   margin: 0.5em;
   padding: 0.25em;
   border: none;
-  background-color: whitesmoke;
+  background-color: aliceblue;
   font-size: 1.5em;
 }
 
