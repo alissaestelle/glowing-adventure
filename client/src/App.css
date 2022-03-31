@@ -12,7 +12,10 @@
 
   height: 100vh;
   margin: 0;
-  background-color: rgb(80, 91, 105);
+  background-image: url('https://imgur.com/caisMdf.jpg');
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: 100%;
 }
 
 .App header {
@@ -38,7 +41,6 @@
 
   height: 100vh;
   margin: 0;
-  background-color: rgb(80, 91, 105);
 }
 
 .Edit {
@@ -75,7 +77,7 @@
 }
 
 .Home aside {
-  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
+  background: rgb(189, 111, 39);
   margin-top: 3.5em;
   border-radius: 20px;
   text-align: center;
@@ -111,7 +113,7 @@
 }
 
 .Posts header {
-  background-color: #fde6ee;
+  background-color: #f8d2df;
   background-image: none;
   padding: 0.5em;
 }
