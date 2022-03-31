@@ -1,23 +1,50 @@
-// import axios from 'axios'
-// import { useState, useEffect } from 'react'
-// import { useParams } from 'react-router-dom'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import Form from '../components/Form'
 
-const EditPost = (props) => {
-  // const [specificPost, setSpecificPost] = useState(null)
-  // let { postID } = useParams()
+const EditPost = () => {
+  let { id } = useParams()
+  let navigate = useNavigate()
 
-  // useEffect(() => {
-  //   const getPostID = async () => {
-  //     let postResults = await axios.get(`http://localhost:3001/edits/${postID}`)
-  //     setSpecificPost(postResults.data)
-  //     console.log(specificPost)
-  //   }
-  //   getPostID()
-  // })
+  const [formValues, setFormValues] = useState({
+    title: '',
+    author: '62420bcc70117cfd84d31f3a',
+    content: ''
+  })
+
+  const handleChange = (e) => {
+    const post = {
+      ...formValues,
+      [e.target.name]: e.target.value
+    }
+    setFormValues(post)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await axios.put(`http://localhost:3001/posts/${id}`, formValues)
+    navigate('/')
+  }
+
+  useEffect(() => {
+    const getPostID = async () => {
+      let postResults = await axios.get(`http://localhost:3001/posts/${id}`)
+      setFormValues(postResults.data)
+    }
+    getPostID()
+  }, [id])
 
   return (
     <div className="Edit">
-      <div contentEditable="true">Test Text</div>
+      <header>Test</header>
+      <main>
+        <Form
+          formValues={formValues}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
+      </main>
     </div>
   )
 }

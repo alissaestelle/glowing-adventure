@@ -18,7 +18,7 @@ const NewPost = ({ blogPost, saveContent, submitPost }) => {
             value={blogPost.content}
             onChange={saveContent}
           ></textarea>
-          <input id="Save" type="submit" value="Create" />
+          <input id="Create" type="submit" value="Create" />
         </form>
       </article>
     </div>

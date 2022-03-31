@@ -7,7 +7,6 @@ const SideBar = ({ clicked, createPost }) => {
       </form>
       <nav>
         <ul>
-          <li onClick=""></li>
           <li onClick={createPost}>{clicked ? 'Home' : 'Create New'}</li>
         </ul>
       </nav>

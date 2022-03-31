@@ -10,13 +10,6 @@ import About from './pages/About'
 import EditPost from './pages/EditPost'
 
 function App() {
-  // const [clicked, toggleClick] = useState(false)
-
-  // const createPost = (e) => {
-  //   toggleClick(!clicked)
-  //   // !clicked = true
-  // }
-
   return (
     <div className="App">
       {/* <header>
@@ -29,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/edits" element={<EditPost />} />
+          <Route path="/edits/:id" element={<EditPost />} />
         </Routes>
       </main>
     </div>

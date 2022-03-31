@@ -9,12 +9,12 @@ import NewPost from '../components/NewPost'
 
 const Home = () => {
   // let navigate = useNavigate()
-  const [articles, setArticles] = useState([])
   const [blogPost, setBlogPost] = useState({
     title: '',
     author: '62420bcc70117cfd84d31f3a',
     content: ''
   })
+  const [articles, setArticles] = useState([])
   const [clicked, toggleClick] = useState(false)
   // const [submitted, toggleSubmit] = useState(false)
 
@@ -27,17 +27,17 @@ const Home = () => {
     renderArticles()
   }, [])
 
-  const createPost = (e) => {
-    toggleClick(!clicked)
-    // !clicked = true
-  }
-
   const saveContent = (e) => {
     const newPost = {
       ...blogPost,
       [e.target.name]: e.target.value
     }
     setBlogPost(newPost)
+  }
+
+  const createPost = (e) => {
+    toggleClick(!clicked)
+    // !clicked = true
   }
 
   const submitPost = async (e) => {
@@ -54,7 +54,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <header>
+      <header id="Home-Header">
         <Header />
       </header>
       <aside>
@@ -66,6 +66,7 @@ const Home = () => {
           articles.map((article) => (
             <Article
               key={article._id}
+              objectID={article._id}
               title={article.title}
               author={article.author}
               content={article.content}

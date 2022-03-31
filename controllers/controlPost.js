@@ -20,7 +20,7 @@ const createPost = async (req, res) => {
   await consolePosts()
 }
 
-const updatePost = async (req, res) => {
+const getPostById = async (req, res) => {
   try {
     const specificPost = await Post.findById(req.params.id)
     res.json(specificPost)
@@ -30,8 +30,32 @@ const updatePost = async (req, res) => {
   }
 }
 
+const updatePost = async (req, res) => {
+  try {
+    const post = await Post.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.json(post)
+  } catch (e) {
+    console.log(e)
+    res.send('Oops! Something went wrong.')
+  }
+}
+
+const deletePost = async (req, res) => {
+  try {
+    await Post.findByIdAndDelete(req.params.id)
+    res.send('Post Successfully Deleted')
+  } catch (e) {
+    console.log(e)
+    res.send('Oops! Something went wrong.')
+  }
+}
+
 module.exports = {
   getPosts,
   createPost,
-  updatePost
+  getPostById,
+  updatePost,
+  deletePost
 }
