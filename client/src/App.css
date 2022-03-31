@@ -43,6 +43,13 @@
   text-align: center;
 }
 
+.Delete {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-template-rows: 1fr;
+  text-align: center;
+}
+
 .Home aside {
   background: linear-gradient(rgb(233, 240, 250), white);
   margin-top: 0.5em;
@@ -209,4 +216,31 @@ input {
   border: none;
   background-color: whitesmoke;
   font-size: 1.5em;
+}
+
+.Delete aside {
+  background: linear-gradient(rgb(233, 240, 250), white);
+  margin-top: 0.5em;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.Delete h1 {
+  font-size: 2.5em;
+}
+
+.Delete input {
+  font-size: 1em;
+}
+
+.Delete a {
+  display: block;
+  margin-top: 1em;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.Delete main {
+  font-size: 2em;
+  margin-top: 1em;
 }

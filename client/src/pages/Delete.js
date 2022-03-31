@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Delete = () => {
   return (
-    <div>
+    <div className="Delete">
       <aside>
         <h1>side bar.</h1>
         <form id="Delete-Search">
@@ -12,7 +12,6 @@ const Delete = () => {
       </aside>
       <main>
         <p>Page successfully deleted.</p>
-        <Link to="/">Home</Link>
       </main>
     </div>
   )
