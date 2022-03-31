@@ -34,16 +34,29 @@
   padding-top: 1.5em;
 }
 
+.Title {
+  background-color: antiquewhite;
+  width: 65vw;
+  margin: auto;
+  padding-bottom: 0.05%;
+  border-radius: 50px;
+}
+
 .Search input {
   display: block;
-  width: 75vw;
-  margin: auto;
   border: none;
-  border-bottom: 2px solid whitesmoke;
-  font-size: 1.5em;
+  float: left;
+  margin-left: 0.75em;
+  width: 19.75vw;
+  font-size: 1.75em;
+  color: whitesmoke;
   font-weight: bold;
   text-transform: lowercase;
   background-color: transparent;
+}
+
+.Search ::placeholder {
+  color: whitesmoke;
 }
 
 .Search h1 {
@@ -105,4 +118,8 @@ input {
   border: none;
   background-color: whitesmoke;
   font-size: 1.5em;
+}
+
+.Edit {
+  background-color: cornflowerblue;
 }

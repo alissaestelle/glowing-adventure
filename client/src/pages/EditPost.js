@@ -15,7 +15,11 @@ const EditPost = (props) => {
   //   getPostID()
   // })
 
-  return <div className="Edit"></div>
+  return (
+    <div className="Edit">
+      <div contentEditable="true">Test Text</div>
+    </div>
+  )
 }
 
 export default EditPost
