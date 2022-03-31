@@ -1,21 +1,21 @@
-import axios from 'axios'
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+// import axios from 'axios'
+// import { useState, useEffect } from 'react'
+// import { useParams } from 'react-router-dom'
 
 const EditPost = (props) => {
-  const [specificPost, setSpecificPost] = useState(null)
-  let { postID } = useParams()
+  // const [specificPost, setSpecificPost] = useState(null)
+  // let { postID } = useParams()
 
-  useEffect(() => {
-    const getPostID = async () => {
-      let postResults = await axios.get(`http://localhost:3001/edits/${postID}`)
-      console.log(postResults)
-      setSpecificPost(postResults.data)
-    }
-    getPostID()
-  })
+  // useEffect(() => {
+  //   const getPostID = async () => {
+  //     let postResults = await axios.get(`http://localhost:3001/edits/${postID}`)
+  //     setSpecificPost(postResults.data)
+  //     console.log(specificPost)
+  //   }
+  //   getPostID()
+  // })
 
-  return <div></div>
+  return <div className="Edit"></div>
 }
 
 export default EditPost
