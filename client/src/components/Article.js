@@ -1,7 +1,15 @@
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Article = (props) => {
-  // handleDelete here
+  const handleDelete = async (e) => {
+    e.preventDefault()
+    await axios.delete(
+      `http://localhost:3001/delete/posts/${props.objectID}`,
+      props.formValues
+    )
+    console.log('Successfully Deleted!')
+  }
 
   return (
     <div className="Posts">
@@ -13,7 +21,7 @@ const Article = (props) => {
         <p>{props.content}</p>
         {/* <input id="Edit" type="submit" value="Edit" /> */}
         <Link to={`/edits/${props.objectID}`}>Edit</Link>
-        <button>Delete</button>
+        <button onClick={handleDelete}>Delete</button>
       </article>
     </div>
   )
