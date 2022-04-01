@@ -18,7 +18,7 @@ const Home = () => {
 
   useEffect(() => {
     const renderArticles = async () => {
-      let database = await axios.get('/')
+      let database = await axios.get('/allposts')
       console.log(database)
       setArticles(database.data)
     }
