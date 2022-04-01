@@ -25,7 +25,7 @@ const EditPost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await axios.put(`/posts/${id}`, formValues)
-    navigate('/')
+    navigate('/allposts')
   }
 
   useEffect(() => {

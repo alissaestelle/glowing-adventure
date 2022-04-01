@@ -11,7 +11,7 @@ const Delete = () => {
         <Link to="/">Home</Link>
       </aside>
       <main>
-        <p>Page successfully deleted.</p>
+        <p>Post successfully deleted.</p>
       </main>
     </div>
   )
