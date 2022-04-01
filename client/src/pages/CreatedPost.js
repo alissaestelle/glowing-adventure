@@ -12,6 +12,11 @@ const CreatedPost = () => {
       </aside>
       <main>
         <p>Post successfully created.</p>
+        <img
+          className="Robin"
+          src="https://imgur.com/7JXVwnw.jpg"
+          alt="Robin Williams Reblog"
+        />
       </main>
     </div>
   )

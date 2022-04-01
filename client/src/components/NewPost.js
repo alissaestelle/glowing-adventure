@@ -5,6 +5,7 @@ const NewPost = ({ blogPost, saveContent, submitPost }) => {
         <form onSubmit={submitPost}>
           <h1 id="User">@rarejules</h1>
           <input
+            id="New-Post-Title"
             type="text"
             placeholder="Title"
             name="title"

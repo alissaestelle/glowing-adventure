@@ -15,7 +15,7 @@ const Article = (props) => {
       <article>
         <header>
           <h3>{props.title}</h3>
-          <p>by: @rarejules</p>
+          <p id="Author">by: @rarejules</p>
         </header>
         <p>{props.content}</p>
         {/* <input id="Edit" type="submit" value="Edit" /> */}
