@@ -8,7 +8,7 @@ const CreatedPost = () => {
         <form id="Created-Search">
           <input placeholder="Search"></input>
         </form>
-        <Link to="/allposts">Home</Link>
+        <Link to="/">Home</Link>
       </aside>
       <main>
         <p>Post successfully created.</p>

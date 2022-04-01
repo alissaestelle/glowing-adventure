@@ -25,7 +25,7 @@ const EditPost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await axios.put(`/posts/${id}`, formValues)
-    navigate('/allposts')
+    navigate('/')
   }
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const EditPost = () => {
         <form id="Edit-Search">
           <input placeholder="Search"></input>
         </form>
-        <Link to="/allposts">Home</Link>
+        <Link to="/">Home</Link>
       </aside>
       <main>
         <Form
