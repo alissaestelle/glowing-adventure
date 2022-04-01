@@ -43,7 +43,7 @@ const EditPost = () => {
         <form id="Edit-Search">
           <input placeholder="Search"></input>
         </form>
-        <Link to="/">Home</Link>
+        <Link to="/allposts">Home</Link>
       </aside>
       <main>
         <Form
