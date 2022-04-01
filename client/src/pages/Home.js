@@ -18,7 +18,7 @@ const Home = () => {
 
   useEffect(() => {
     const renderArticles = async () => {
-      let database = await axios.get('http://localhost:3001/')
+      let database = await axios.get('/')
       console.log(database)
       setArticles(database.data)
     }
@@ -39,7 +39,7 @@ const Home = () => {
 
   const submitPost = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/new', blogPost)
+    await axios.post('/new', blogPost)
     setBlogPost({
       title: '',
       author: '62420bcc70117cfd84d31f3a',

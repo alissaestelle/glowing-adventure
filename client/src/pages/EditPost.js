@@ -24,13 +24,13 @@ const EditPost = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:3001/posts/${id}`, formValues)
+    await axios.put(`/posts/${id}`, formValues)
     navigate('/')
   }
 
   useEffect(() => {
     const getPostID = async () => {
-      let postResults = await axios.get(`http://localhost:3001/posts/${id}`)
+      let postResults = await axios.get(`/posts/${id}`)
       setFormValues(postResults.data)
     }
     getPostID()

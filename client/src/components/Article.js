@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const Article = (props) => {
   let navigate = useNavigate()
   const handleDelete = async () => {
-    await axios.delete(`http://localhost:3001/delete/posts/${props.objectID}`)
+    await axios.delete(`/delete/posts/${props.objectID}`)
     console.log('Successfully Deleted!')
     navigate('/confirm/delete')
   }
