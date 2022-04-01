@@ -18,7 +18,7 @@ app.use(logger('dev'))
 
 app.use(express.static(`${__dirname}/client/build`))
 
-app.get('/', controlPost.getPosts)
+app.get('/allposts', controlPost.getPosts)
 app.post('/new', controlPost.createPost)
 app.get('/posts/:id', controlPost.getPostById)
 app.put('/posts/:id', controlPost.updatePost)
