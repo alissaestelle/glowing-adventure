@@ -16,11 +16,17 @@ app.use(logger('dev'))
 //   res.send('I am the root! 🪴')
 // })
 
+app.use(express.static(`${__dirname}/client/build`))
+
 app.get('/', controlPost.getPosts)
 app.post('/new', controlPost.createPost)
 app.get('/posts/:id', controlPost.getPostById)
 app.put('/posts/:id', controlPost.updatePost)
 app.delete('/delete/posts/:id', controlPost.deletePost)
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
+})
 
 app.listen(PORT, () => {
   console.log(`Express serving up blog bunnies on port ${PORT} 🐰`)
