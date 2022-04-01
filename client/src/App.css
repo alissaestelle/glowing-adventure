@@ -12,10 +12,6 @@
 
   height: 100vh;
   margin: 0;
-  background-image: url('https://imgur.com/caisMdf.jpg');
-  background-size: 100vw;
-  background-repeat: no-repeat;
-  background-position: 100%;
 }
 
 .App header {
@@ -30,6 +26,7 @@
   text-align: right;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
+  margin-right: 0.5em;
   font-size: 3.5em;
   color: rgba(248, 196, 23, 0.5);
 }
@@ -76,19 +73,67 @@
   background-color: rgb(80, 91, 105);
 }
 
+.Home main {
+  width: 60vw;
+  margin: auto;
+  padding-top: 0.5em;
+  border-radius: 20px;
+}
+
+.Edit main {
+  width: 60vw;
+  height: 100vh;
+  text-align: center;
+  margin: auto;
+  padding-top: 0.5em;
+  border-radius: 20px;
+}
+
+.Delete main {
+  font-size: 2em;
+  margin-top: 2em;
+}
+
+.Created-Post main {
+  font-size: 2em;
+  margin-top: 2em;
+}
+
 .Home aside {
   background: rgb(189, 111, 39);
   margin-top: 3.5em;
   border-radius: 20px;
   text-align: center;
   height: 75vh;
+
+  background-image: url('https://imgur.com/L2cxx8r.jpg');
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-position: 100%;
 }
 
-.Home main {
-  width: 60vw;
-  margin: auto;
-  padding-top: 0.5em;
+.Edit aside {
+  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
+  margin-top: 3.5em;
   border-radius: 20px;
+  text-align: center;
+  height: 75vh;
+}
+
+.Delete aside {
+  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
+  margin-top: 3.5em;
+  border-radius: 20px;
+  text-align: center;
+  height: 75vh;
+}
+
+.Created-Post aside {
+  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
+  margin-top: 3.5em;
+  border-radius: 20px;
+  text-align: center;
+  height: 75vh;
 }
 
 .Side h1 {
@@ -185,15 +230,6 @@ input {
   font-size: 1.5em;
 }
 
-.Edit main {
-  width: 60vw;
-  height: 100vh;
-  text-align: center;
-  margin: auto;
-  padding-top: 0.5em;
-  border-radius: 20px;
-}
-
 .Edit h1 {
   font-size: 2.5em;
 }
@@ -203,14 +239,6 @@ input {
   margin-top: 1em;
   font-size: 1.5em;
   text-decoration: none;
-}
-
-.Edit aside {
-  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
-  margin-top: 3.5em;
-  border-radius: 20px;
-  text-align: center;
-  height: 75vh;
 }
 
 #Edit-Search input {
@@ -248,14 +276,6 @@ input {
   font-size: 1.5em;
 }
 
-.Delete aside {
-  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
-  margin-top: 3.5em;
-  border-radius: 20px;
-  text-align: center;
-  height: 75vh;
-}
-
 .Delete h1 {
   font-size: 2.5em;
 }
@@ -271,19 +291,6 @@ input {
   text-decoration: none;
 }
 
-.Delete main {
-  font-size: 2em;
-  margin-top: 2em;
-}
-
-.Created-Post aside {
-  background: linear-gradient(rgba(222, 237, 248, 0.7), white);
-  margin-top: 3.5em;
-  border-radius: 20px;
-  text-align: center;
-  height: 75vh;
-}
-
 .Created-Post h1 {
   font-size: 2.5em;
 }
@@ -297,9 +304,4 @@ input {
   margin-top: 1em;
   font-size: 1.5em;
   text-decoration: none;
-}
-
-.Created-Post main {
-  font-size: 2em;
-  margin-top: 2em;
 }
